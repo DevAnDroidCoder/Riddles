@@ -9,9 +9,9 @@ public class MonkeyRiddle {
 
     for (int i = 0; i < Integer.valueOf(args[0]); i++) {
       doors.add(new Boolean(false));
-      System.out.println("Added door".concat(String.valueOf(i + 1)));
     }
-    System.out.print("\n"); // Prints neext line
+    System.out.println("Number of doors: ".concat(args[0]));
+    System.out.print("\n"); // Prints next line
     for (int i = 0; i < Integer.valueOf(args[0]); i++) {
       for (int j = 0; j < Integer.valueOf(args[0]); j++) {
         // i is monkey, j is door
