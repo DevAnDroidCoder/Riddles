@@ -1,0 +1,23 @@
+plugins {
+  id("application")
+}
+
+application {
+  mainClassName = "com.riddle.PrisonerRiddle"
+}
+
+task executePrisonerRiddle(type: JavaExec) {
+  dependsOn("assemble")
+  classpath = sourceSets.main.runtimeClasspath
+  main = "com.riddle.PrisonerRiddle"
+  // Arg0: number of prisions
+  args = ["100"]
+}
+
+task executeMonkeyRiddle(type: JavaExec) {
+  dependsOn("assemble")
+  classpath = sourceSets.main.runtimeClasspath
+  main = "com.riddle.MonkeyRiddle"
+  // Arg0: number of doors
+  args = ["1000"]
+}
